@@ -3,14 +3,14 @@ import {
 } from 'redux';
 
 import {
-    letters
+    rootReducer
 } from './reducers';
 
 import React from 'react';
 import Alphabet from './container/AlphabetContainer';
 import { Provider } from 'react-redux';
 
-const store = createStore(letters);
+const store = createStore(rootReducer);
 
 export default function AlphabetCounter() {
     return (

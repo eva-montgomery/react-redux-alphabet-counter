@@ -5,10 +5,10 @@ import {
 
 import Alphabet from '../components/Alphabet';
 import { actionIncrement, actionDecrement, actionReset } from '../actions';
-
 function mapStateToProps(state) {
     return {
-        count: state
+        letters: state.letters,
+        capsLetters: state.capsLetters,
     }
 }
 
