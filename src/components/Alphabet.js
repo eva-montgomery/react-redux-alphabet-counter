@@ -1,23 +1,16 @@
 import React from 'react';
 
-function Alphabet({
-    letters,
-    capsLetters,
-    handleIncrement,
-    handleDecrement,
-    handleReset
-}) {
+function Alphabet(props) {
+    console.log(props);
     return (
-    
+
         <div>
-            <h1>{letters}</h1>
-                <button onClick={handleDecrement}>-</button>
-                <button onClick={handleIncrement}>+</button>
-                <button onClick={handleReset}>Reset</button>
-            <h1>{capsLetters}</h1>
-                <button onClick={handleDecrement}>-</button>
-                <button onClick={handleIncrement}>+</button>
-                <button onClick={handleReset}>Reset</button>
+
+            <h1>{props[props.dropdown]}</h1>
+                <button onClick={props.handleDecrement}>-</button>
+                <button onClick={props.handleIncrement}>+</button>
+                <button onClick={props.handleReset}>Reset</button>
+           
         </div>    
     );
 }
